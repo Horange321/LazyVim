@@ -123,7 +123,7 @@ vim.filetype.add({
         return vim.bo[buf]
             and vim.bo[buf].filetype ~= "bigfile"
             and path
-            and (bfs and vim.fn.getfsize(path) > bfs or true)
+            and (bfs and vim.fn.getfsize(path) > bfs or false)
             and "bigfile"
           or nil
       end,
